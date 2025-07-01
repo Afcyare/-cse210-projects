@@ -1,9 +1,28 @@
 using System;
 
-class Program
+// Console.Write("What is the magic number? ");
+Random generateRamdom = new();
+
+int magicNumber = generateRamdom.Next(1, 100);
+
+
+int guess = -1; // Initialize guess
+
+
+while (guess != magicNumber)
 {
-    static void Main(string[] args)
+    Console.Write("What is your guess? ");
+    guess = int.Parse(Console.ReadLine());
+    if (magicNumber > guess)
     {
-        Console.WriteLine("Hello World! This is the Exercise3 Project.");
+        Console.WriteLine("Try higher number");
+    }
+    else if (magicNumber < guess)
+    {
+        Console.WriteLine("Try lower number");
+    }
+    else
+    {
+        Console.WriteLine("Congratulations! You guessed it!");
     }
 }
