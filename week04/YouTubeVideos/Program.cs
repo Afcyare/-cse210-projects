@@ -20,6 +20,7 @@ public class Program
         video1._comments.Add(comment2);
         video1._comments.Add(comment3);
 
+        // Create second video
         Video video2 = new Video();
         video2._title = "OOP Principles Explained";
         video2._author = "CodeMaster";
@@ -34,12 +35,13 @@ public class Program
         video2._comments.Add(comment5);
         video2._comments.Add(comment6);
 
-
+        // Create third video
         Video video3 = new Video();
         video3._title = "Building Your First API";
         video3._author = "WebDevPro";
         video3._lenght = 900;
 
+        // Add comments to third video
         Comment comment7 = new Comment("Abdirahman", "Well explained");
         Comment comment8 = new Comment("yasin", "that was great video");
         Comment comment9 = new Comment("abdul", "perfect, you explained everything well");
@@ -67,6 +69,6 @@ public class Program
                 Console.WriteLine($"- {comment._commenterName}: {comment._commenterText}");
             }
             Console.WriteLine();
-        }      
+        }
     }
 }
